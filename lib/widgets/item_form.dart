@@ -117,7 +117,6 @@ class _ItemFormState extends State<ItemForm> {
                   createdAt: widget.item?.createdAt ?? DateTime.now(),
                 );
                 widget.onSubmit(item);
-                Navigator.pop(context);
               }
             },
             child: Text(widget.item == null ? 'Add Item' : 'Update Item'),

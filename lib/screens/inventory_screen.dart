@@ -28,6 +28,7 @@ class _InventoryScreenState extends State<InventoryScreen> {
         child: ItemForm(
           item: item,
           onSubmit: (newItem) async {
+            Navigator.pop(context);
             if (item == null) {
               await _service.addItem(newItem);
             } else {
